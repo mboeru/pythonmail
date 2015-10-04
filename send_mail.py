@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import smtplib
 from email.MIMEMultipart import MIMEMultipart
@@ -40,7 +40,7 @@ def mail(to, subject, text, attach):
            'attachment; filename="%s"' % os.path.basename(attach))
    msg.attach(part)
 
-   mailServer = smtplib.SMTP("smtp.gmail.com", 587)
+   mailServer = smtplib.SMTP("mail.bigstep.com", 587)
    mailServer.ehlo()
    mailServer.starttls()
    mailServer.ehlo()
